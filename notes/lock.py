@@ -56,7 +56,7 @@ def main() -> None:
 
     logging.info("Updating DB state without lock.")
     with ThreadPoolExecutor(max_workers=3) as executor:
-        for index in range(1,3):
+        for index in range(1, 3):
             executor.submit(db.no_lock_update, index)
 
     print("")

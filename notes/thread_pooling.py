@@ -1,5 +1,4 @@
 """Module contains an example of the distinction between no thread/thread in Python."""
-import threading
 from concurrent.futures import ThreadPoolExecutor
 import time
 import logging

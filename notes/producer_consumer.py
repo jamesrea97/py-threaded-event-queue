@@ -4,7 +4,6 @@ from queue import Queue
 import logging
 import random
 from threading import Event
-import time
 
 
 def producer(queue: Queue, event: Event):
