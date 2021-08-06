@@ -1,0 +1,22 @@
+
+@host=0.0.0.0
+@port=8080
+
+
+###
+# @name fetch_db_data
+POST http://{{host}}:{{port}}/db
+Content-Type: application/json
+{
+    "data": "value"
+}
+###
+
+
+###
+# @name fetch_db_completion_state
+# @id identifier
+GET http://{{host}}:{{port}}/db/{{id}}
+
+###
+

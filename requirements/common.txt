@@ -1,0 +1,2 @@
+# Common dependencies
+flask==2.0.*

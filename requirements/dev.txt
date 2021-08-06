@@ -1,0 +1,4 @@
+# Dev dependencies
+-r common.txt
+autopep8==1.5.*
+flake8==3.9.*
