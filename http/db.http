@@ -5,17 +5,19 @@
 
 ###
 # @name fetch_db_data
-POST http://{{host}}:{{port}}/db/a
+@country = "Indonesia"
+POST http://{{host}}:{{port}}/db
+Content-Type: application/json
+
 {
-    "country": "Belgium"
+    "country": {{country}}
 }
 ###
 
-
 ###
-# @name fetch_db_completion_state
-# @id identifier
-GET http://{{host}}:{{port}}/db/{{id}}
-
+# @name get_job_status
+@uuid = 20f38377-3184-4c29-b016-06efa96aa355
+GET http://{{host}}:{{port}}/db
+    ?event_id={{uuid}}  
 ###
 

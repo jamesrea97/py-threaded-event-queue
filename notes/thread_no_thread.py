@@ -2,6 +2,7 @@
 import threading
 import time
 import logging
+import cProfile
 
 
 def long_task() -> None:

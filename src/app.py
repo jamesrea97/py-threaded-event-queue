@@ -12,12 +12,10 @@ from db_handler import DBHandler
 app = Flask(__name__)
 db_handler = DBHandler()
 
-# @app.route('/db', defaults={'event_id': None},  methods=["GET", "POST"])
-
 
 @app.route('/db',  methods=["GET", "POST"])
 def db():
-    """Retrieves data/status of retrieval from DB."""
+    """Retrieves data from DB (POST) or status of DB request(GET)."""
     if request.method == "POST":
         return jsonify(db_handler.get_data(request.json).to_json())
 
@@ -36,6 +34,7 @@ def setup_logging() -> None:
 
 
 def main():
+    """Main driver for service."""
     setup_logging()
 
     app.run(host=os.getenv("HOST", "0.0.0.0"), port=os.getenv("PORT", 8080))
