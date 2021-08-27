@@ -16,6 +16,12 @@ pip install -r ./requirements/prod.txt
 python ./src/app.py
 ```
 
+## Environment
+Here is an example of the environment variables needed for this project.
+HOST=127.0.0.1
+PORT=8080
+LOG_LEVEL=INFO
+
 ## Service API
 Please refer to `./http` to get a full list of the routing for this service's API.
 

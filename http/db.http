@@ -11,7 +11,7 @@ Content-Type: application/json
 
 ###
 # @name get_job_status
-@uuid = aff8b1bc-dfda-4da2-973c-dcb2ef365602
+@uuid =f31c4c2b-7a52-45ea-a24c-0ce0f3525b16
 GET http://{{host}}:{{port}}/db
     ?event_id={{uuid}}  
 ###
