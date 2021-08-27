@@ -1,8 +1,3 @@
-
-@host=127.0.0.1
-@port=8080
-
-
 ###
 # @name fetch_db_data
 @country = "Indonesia"
@@ -16,7 +11,7 @@ Content-Type: application/json
 
 ###
 # @name get_job_status
-@uuid = 20f38377-3184-4c29-b016-06efa96aa355
+@uuid = aff8b1bc-dfda-4da2-973c-dcb2ef365602
 GET http://{{host}}:{{port}}/db
     ?event_id={{uuid}}  
 ###

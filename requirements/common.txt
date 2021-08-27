@@ -1,2 +1,3 @@
 # Common dependencies
 flask==2.0.*
+python-dotenv==0.19.*

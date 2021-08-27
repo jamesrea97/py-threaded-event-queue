@@ -8,6 +8,7 @@ from flask import jsonify
 from werkzeug.exceptions import BadRequest
 
 from db_handler import DBHandler
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 db_handler = DBHandler()
@@ -33,11 +34,16 @@ def setup_logging() -> None:
                         datefmt="%H:%M:%S")
 
 
+def start():
+    app.run(host=os.getenv("HOST", "0.0.0.0"), port=os.getenv("PORT", 8080))
+
+
 def main():
     """Main driver for service."""
+    load_dotenv('.env')
     setup_logging()
 
-    app.run(host=os.getenv("HOST", "0.0.0.0"), port=os.getenv("PORT", 8080))
+    start()
 
 
 if __name__ == "__main__":
